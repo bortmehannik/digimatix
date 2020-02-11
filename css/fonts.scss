@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "CentroSlabBold";
+  src: url('../fonts/CentroSlabBold.ttf') format("truetype"),
+  url('../fonts/CentroSlabBold.eot') format("embedded-opentype"),
+  url('../fonts/CentroSlabBold.woff') format("woff");
+}
+
+@font-face {
+  font-family: "CirceRegular";
+  src: url('../fonts/CirceRegular.otf') format("otf"),
+  url('../fonts/CirceRegular.ttf') format("truetype"),
+  url('../fonts/CirceRegular.woff') format("woff"),
+  url('../fonts/CirceRegular.eot') format("embedded-opentype");
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: local("Lobster"), local("Lobster"), url('../fonts/Lobster.ttf') format("embedded-opentype"), url('../fonts/Lobster.woff') format("woff"), url('../fonts/Lobster.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "AmazingGrotesk";
+  src: url('../fonts/AmazingGroteskDemi.eot') format("embedded-opentype"),
+  url('../fonts/AmazingGroteskDemi.woff') format("woff"),
+  url('../fonts/AmazingGroteskDemi.woff2') format("woff2"),
+  url('../fonts/AmazingGroteskDemi.ttf') format("truetype");
+}
