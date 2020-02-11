@@ -11,6 +11,19 @@
     <title>DIGIMATIX</title>
 </head>
 <body>
+<!--[if lte IE 10]>
+    <div class="ie-block">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Версия Вашего браузера устарела, для пользования сайтом рекомендуется его обновить!
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<![endif]-->
 <header>
     <nav>
         <div class="logo">
@@ -44,28 +57,34 @@
                 <button><i class="fas fa-list-ul"></i> Расписание</button>
             </div>
             <div class="timetable-blocks">
-                <div class="timetable-blocks__single">
+                <div class="timetable-blocks__single timetable-blocks__single-1">
                     <div class="iframe">
                         <iframe width="100%" height="145" src="https://www.youtube.com/embed/D87Z0-KvH6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <img src="images/time_1.jpg" alt="Актуальные вопросы расчета пособий, изменения в 2015 году">
+                        <div class="img">
+                            <div></div>
+                        </div>
                     </div>
                     <p class="time">12:00</p>
                     <p class="desc">Актуальные вопросы расчета пособий, изменения в 2015 году</p>
                     <p class="name">Сергей Воронцов</p>
                 </div>
-                <div class="timetable-blocks__single">
+                <div class="timetable-blocks__single timetable-blocks__single-2">
                     <div class="iframe">
                         <iframe width="100%" height="145" src="https://www.youtube.com/embed/D87Z0-KvH6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <img src="images/time_2.jpg" alt="Актуальные вопросы расчета пособий, изменения в 2015 году">
+                        <div class="img">
+                            <div></div>
+                        </div>
                     </div>
                     <p class="time">13:00</p>
                     <p class="desc">НДФЛ. Неоднозначные ситуации при расчете</p>
                     <p class="name">Андрей Свиридов</p>
                 </div>
-                <div class="timetable-blocks__single">
+                <div class="timetable-blocks__single timetable-blocks__single-3">
                     <div class="iframe">
                         <iframe width="100%" height="145" src="https://www.youtube.com/embed/D87Z0-KvH6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <img src="images/time_3.jpg" alt="Актуальные вопросы расчета пособий, изменения в 2015 году">
+                        <div class="img">
+                            <div></div>
+                        </div>
                     </div>
                     <p class="time">16:30</p>
                     <p class="desc">Налог на прибыль: спорные вопросы и поправки 2015 года</p>
@@ -74,16 +93,20 @@
                 <div class="timetable-blocks__single timetable-blocks__single-4">
                     <div class="iframe">
                         <iframe width="100%" height="145" src="https://www.youtube.com/embed/D87Z0-KvH6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <img src="images/time_4.jpg" alt="Актуальные вопросы расчета пособий, изменения в 2015 году">
+                        <div class="img">
+                            <div></div>
+                        </div>
                     </div>
                     <p class="time">12:00</p>
                     <p class="desc">Актуальные вопросы расчета пособий, изменения в 2015 году</p>
                     <p class="name">Сергей Воронцов</p>
                 </div>
-                <div class="timetable-blocks__single">
+                <div class="timetable-blocks__single timetable-blocks__single-5">
                     <div class="iframe">
                         <iframe width="100%" height="145" src="https://www.youtube.com/embed/D87Z0-KvH6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <img src="images/time_5.jpg" alt="Актуальные вопросы расчета пособий, изменения в 2015 году">
+                        <div class="img">
+                            <div></div>
+                        </div>
                     </div>
                     <p class="time">13:00</p>
                     <p class="desc">НДФЛ. Неоднозначные ситуации при расчете</p>
@@ -92,7 +115,9 @@
                 <div class="timetable-blocks__single timetable-blocks__single-6">
                     <div class="iframe">
                         <iframe width="100%" height="145" src="https://www.youtube.com/embed/D87Z0-KvH6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <img src="images/time_6.jpg" alt="Актуальные вопросы расчета пособий, изменения в 2015 году">
+                        <div class="img">
+                            <div></div>
+                        </div>
                     </div>
                     <p class="time">16:30</p>
                     <p class="desc">Налог на прибыль: спорные вопросы и поправки 2015 года</p>
@@ -176,28 +201,23 @@
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script>
-let hide = true
-window.onload = () => {
-    if (document.all && !window.atob) {
-        alert('Версия браузер устарела, и некоторые элементы могут отображаться некорректно! Пожалуйста обновите браузер.');
-    }
-}
+var hide = true;
 $('.slider').slick({
     arrows: false,
     dots: true
-})
+});
 $('#more').click(function() {
     if (hide) {
-        $('.hide').css('height', 'auto')
-        $(this).text('Скрыть')
+        $('.hide').css('height', 'auto');
+        $(this).text('Скрыть');
     } else {
-        $('.hide').css('height', '0')
-        $(this).html(`Загрузить больше <i class='far fa-arrow-alt-circle-down' aria-hidden='true'></i>`)
+        $('.hide').css('height', '0');
+        $(this).html('Загрузить больше <i class="far fa-arrow-alt-circle-down" aria-hidden="true"></i>');
     }
-    hide = !hide
-})
+    hide = !hide;
+});
 $('.timetable-blocks__single').click(function() {
-    $(this).addClass('hide-img')
+    $(this).addClass('hide-img');
 })
 </script>
 </body>

@@ -35,6 +35,27 @@ nav {
   padding: 22px 35px 0 27px;
 }
 
+.ie-block {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #000000;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  padding: 10%;
+}
+.ie-block table {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.ie-block table td p {
+  width: 50%;
+}
+
 .social {
   display: flex;
   margin-top: -20px;
@@ -120,14 +141,18 @@ nav {
   margin-bottom: 30px;
   cursor: pointer;
 }
-.timetable-blocks__single img {
+.timetable-blocks__single .img {
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.timetable-blocks__single .img div {
   width: 100%;
   padding: 10px;
-  object-fit: none;
-  object-position: 64% 34%;
   display: block;
   height: 100%;
-  position: absolute;
   top: 0;
   z-index: 1;
 }
@@ -190,11 +215,29 @@ nav {
   line-height: 19px;
   margin: 5px 0;
 }
-.timetable-blocks__single-4 img {
-  object-position: 64% 25%;
+.timetable-blocks__single-1 .img div {
+  background: url(../images/time_1.jpg) no-repeat 64% 34%;
+  position: relative;
 }
-.timetable-blocks__single-6 img {
-  object-position: 55% 15%;
+.timetable-blocks__single-2 .img div {
+  background: url(../images/time_2.jpg) no-repeat 64% 34%;
+  position: relative;
+}
+.timetable-blocks__single-3 .img div {
+  background: url(../images/time_3.jpg) no-repeat 64% 34%;
+  position: relative;
+}
+.timetable-blocks__single-4 .img div {
+  background: url(../images/time_4.jpg) no-repeat 64% 25%;
+  position: relative;
+}
+.timetable-blocks__single-5 .img div {
+  background: url(../images/time_5.jpg) no-repeat 64% 25%;
+  position: relative;
+}
+.timetable-blocks__single-6 .img div {
+  background: url(../images/time_6.jpg) no-repeat 55% 15%;
+  position: relative;
 }
 .timetable-blocks__single:hover .iframe:before {
   background: #f94f33;
@@ -212,7 +255,7 @@ nav {
 .timetable-blocks__single.hide-img .iframe:before {
   z-index: 1;
 }
-.timetable-blocks__single.hide-img img {
+.timetable-blocks__single.hide-img .img {
   display: none;
 }
 
@@ -228,8 +271,8 @@ nav {
   font-size: 27px;
   background: url("../images/button.png") no-repeat;
   border: none;
-  -webkit-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: contain;
+  background-size: contain;
   padding: 29px 35px 19px 35px;
   letter-spacing: 1px;
   color: #ffffff;
